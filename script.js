@@ -8,3 +8,11 @@ score2.textContent = 0;
 
 const dice = document.querySelector('.dice');
 dice.classList.add('hidden');
+
+const rollDice = function () {
+  const randomNumber = Math.trunc(Math.random() * 6 + 1);
+  dice.classList.remove('hidden');
+  dice.src = `dice-${randomNumber}.png`;
+};
+
+rollDice();
